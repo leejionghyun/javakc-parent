@@ -1,16 +1,16 @@
 server:
-  port: 8001 # 服务端口
+  port: 8002 # 服务端口
 
 spring:
   application:
-    name: service-pms # 服务名
+    name: service-mes # 服务名
   profiles:
     active: dev # 环境设置:dev、test、prod
   datasource: # 数据库连接
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-    url: jdbc:mysql://localhost:3306/pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/mes?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
     initialSize: 5 # 初始化时建立物理连接的个数
     minIdel: 5 # 最小连接池数量
     maxActive: 20 # 最大连接池数量
@@ -39,6 +39,3 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-feign:
-  hystrix:
-    enabled: true
